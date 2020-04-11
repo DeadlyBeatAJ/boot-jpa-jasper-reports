@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Employees" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af3fe8e3-a717-45a8-bc76-a9854d380593">
+	
+	<!-- commented because we are not using Jaspersoft Db
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>	
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM ORDERS;]]>
+	</queryString>-->
+	
+	<!-- Field name should be same as the variable of Entity class -->
+	<field name="id" class="java.lang.Integer">
+	</field>
+	
+	<field name="name" class="java.lang.String">
+	</field>
+	
+	<field name="designation" class="java.lang.String">
+	</field>
+	
+	<field name="salary" class="java.lang.String">
+	</field>
+	
+	<field name="doj" class="java.util.Date">
+	</field>
+	
+	<background>
+		<band/>
+	</background>
+	
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="3c7533cc-65ba-4b8d-a654-2a12a9bcf29b"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="9524b6b2-aed0-48f3-8018-5f1aa47cdb3c"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DeadlyBeat]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="d00c3aa7-8c14-4f7b-94f4-61ebc7262c4e"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Employees Report]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="f50da5cf-1531-44f1-ba14-8c75b70c0476"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b293957f-f3a2-4a05-af0a-69501c7f49c2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="26acce46-c749-472c-ada3-1615ae24d828"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4c0a1b12-ba2d-4b0b-83e0-7ff7fef3bbe5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c2b28d69-473e-440a-ad07-f632ddd133e2"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="dedc7e20-898f-4823-95e7-f5fb039eb993">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b62ebd45-b992-474e-ba57-59b3870a081c"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Designation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="817b4944-45bd-4ec0-a19b-1678acc4be00">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="08384158-4de1-455d-a4fb-42ed8be58863"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="e1605972-5d92-445b-a5f3-ec25155072ec">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3d786cf5-6f0c-4add-ba7b-46cafe6841da"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[D.O.J]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="a8491550-6481-43c4-8d6f-01c5e114ed36"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="111" height="20" uuid="54feba53-dfef-4017-ac9e-e8b1aed87bd7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="26acce46-c749-472c-ada3-1615ae24d828"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<!-- need to provaide same variable names -->
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="111" y="0" width="111" height="20" uuid="907acaa8-061a-46ed-b315-b151220d435d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c2b28d69-473e-440a-ad07-f632ddd133e2"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="222" y="0" width="111" height="20" uuid="63a5a002-860e-409b-981e-2e7744c6f903">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b62ebd45-b992-474e-ba57-59b3870a081c"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{designation}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="333" y="0" width="111" height="20" uuid="574014fa-e707-450a-8663-c0bfb5b1f1c1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="08384158-4de1-455d-a4fb-42ed8be58863"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salary}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="444" y="0" width="111" height="20" uuid="e13591af-c4dd-40d2-95a9-0119c90b6b98">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3d786cf5-6f0c-4add-ba7b-46cafe6841da"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{doj}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="890d3a0b-616c-4def-bfd6-f1cb8d68df95"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="9e254024-00ec-4263-b720-5014d433f46b"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="0ce4e234-6c34-4e26-be14-1c7ccee52baf"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
